@@ -1,6 +1,10 @@
 import { useState } from "react";
 
-const useFilters = (filterData:any) => {
+type IProps = Record<string, string | null | boolean | undefined>;
+
+
+
+const useFilters = (filterData:IProps) => {
    const [filters, setFilters] = useState({...filterData});
 
     function shouldDisableFilterButton() {
@@ -9,8 +13,9 @@ const useFilters = (filterData:any) => {
     }
 
 
-    function applyFilters(filters:any) {
-        setFilters((prevState:any) => { 
+
+    function applyFilters(filters:Partial<IProps>) {
+        setFilters((prevState) => { 
             return {...prevState, ...filters};
         })
     }

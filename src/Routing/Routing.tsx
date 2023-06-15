@@ -1,7 +1,7 @@
 import {FC} from 'react'
 import {RouterProvider, createBrowserRouter, createRoutesFromElements, Route} from 'react-router-dom'
 import Container from '../Layout/Container'
-import AdminProductsPage from '../Pages/Admin/AdminProductsPage/AdminProductsPage'
+import LoginPage from 'pages/LoginPage/LoginPage'
 const Routing:FC = () => {
 
  const routes = createBrowserRouter(createRoutesFromElements(
@@ -10,8 +10,8 @@ const Routing:FC = () => {
     <Route path='/' element={<Container/>} >
 
 
-
-    <Route path='admin' element={<AdminProductsPage/>}/>
+    <Route path='/login' element={<LoginPage/>}/>
+    
 
 
     </Route>
